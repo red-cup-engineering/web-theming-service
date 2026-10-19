@@ -5,8 +5,7 @@
   "description": "Deterministic semantic-article HTML shells and light/dark design-token CSS palettes, with numerical checks of specified token-pair contrast and color scarcity.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/red-cup-engineering/computer-serialized-content-engineering-services-section.git",
-    "directory": "services/css-services-section/services/web-theming-service"
+    "url": "git+https://github.com/red-cup-engineering/web-theming-service.git"
   },
   "engines": {
     "node": ">=22.18"
