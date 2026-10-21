@@ -42,5 +42,10 @@
     "@red-cup-engineering/html-structural-projection-service": "0.3.3"
   },
   "sideEffects": false,
-  "private": false
+  "private": false,
+  "license": "MIT",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
+  }
 }
