@@ -1,0 +1,31 @@
+name: DTCG source conformance
+on:
+  pull_request:
+    paths:
+      - "src/theming-computer/design-tokens.*"
+      - "test/design-tokens.test.mjs"
+      - "package.json"
+      - ".github/workflows/design-token-conformance.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/theming-computer/design-tokens.*"
+      - "test/design-tokens.test.mjs"
+      - "package.json"
+      - ".github/workflows/design-token-conformance.yml"
+permissions:
+  contents: read
+concurrency:
+  group: design-tokens-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  source-conformance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - run: node --check src/theming-computer/design-tokens.mjs
+      - run: node --test test/design-tokens.test.mjs
