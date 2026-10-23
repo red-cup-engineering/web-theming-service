@@ -52,3 +52,24 @@ canonically selected edition, brand tokens and layout/wordmark rules. An
 upstream refactor that merely leaves the right color *words* in unused CSS
 does not satisfy its customer receiving test.
 
+
+## Empirical rendered-color windows (not a policy verdict)
+
+The `./color-coverage` entrypoint accepts actual **opaque rendered RGBA pixels**
+and explicit full-page/viewport rectangles and sRGB color targets. It emits
+per-window matched pixel counts, denominators and fractions under a declared
+8-bit RGB Euclidean radius. This keeps image/window testimony separate from
+`scarcityReport` (the number of chromatic **tokens**) and
+`certifyPalette` (source pair contrast).
+
+Scientific motivation: the same genuine 561.group Chromium screenshot
+([site PR #37](https://github.com/561-group/561.group/pull/37)) yielded
+1.861% alarm-red pixels over its full 1440 × 6282 document but 7.568% in
+its first 1440 × 900 viewport when sampled at radius 20. This does
+**not** settle the original Design Bible's **mark-bounding-box** color
+budget, any perceptual salience claim, or accessibility. Such interpretation
+must be carried by the competent brand/source owner and actual receiver.
+The source-observation helper is domain-neutral and has no rendered side
+effects, network requests, image decoder, or authority to approve a screenshot.
+
+Run `node --test test/color-coverage.test.mjs` without provider credentials.

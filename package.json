@@ -33,6 +33,10 @@
     "./design-tokens": {
       "types": "./src/theming-computer/design-tokens.d.mts",
       "default": "./src/theming-computer/design-tokens.mjs"
+    },
+    "./color-coverage": {
+      "types": "./src/theming-computer/color-coverage.d.mts",
+      "default": "./src/theming-computer/color-coverage.mjs"
     }
   },
   "dependencies": {

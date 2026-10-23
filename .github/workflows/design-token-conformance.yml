@@ -4,6 +4,8 @@ on:
     paths:
       - "src/theming-computer/design-tokens.*"
       - "test/design-tokens.test.mjs"
+      - "src/theming-computer/color-coverage.*"
+      - "test/color-coverage.test.mjs"
       - "package.json"
       - ".github/workflows/design-token-conformance.yml"
   push:
@@ -11,6 +13,8 @@ on:
     paths:
       - "src/theming-computer/design-tokens.*"
       - "test/design-tokens.test.mjs"
+      - "src/theming-computer/color-coverage.*"
+      - "test/color-coverage.test.mjs"
       - "package.json"
       - ".github/workflows/design-token-conformance.yml"
 permissions:
@@ -29,3 +33,5 @@ jobs:
           node-version: "24"
       - run: node --check src/theming-computer/design-tokens.mjs
       - run: node --test test/design-tokens.test.mjs
+      - run: node --check src/theming-computer/color-coverage.mjs
+      - run: node --test test/color-coverage.test.mjs
