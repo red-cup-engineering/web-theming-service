@@ -30,7 +30,10 @@
     },
     "./package.json": "./package.json",
     "./themed-page": "./src/themed-page.mjs",
-    "./design-tokens": "./src/theming-computer/design-tokens.mjs"
+    "./design-tokens": {
+      "types": "./src/theming-computer/design-tokens.d.mts",
+      "default": "./src/theming-computer/design-tokens.mjs"
+    }
   },
   "dependencies": {
     "@red-cup-engineering/metrologic": "0.4.0",
