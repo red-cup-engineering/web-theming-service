@@ -8,7 +8,7 @@
 
 import { escapeAttr } from "@red-cup-engineering/html-structural-projection-service";
 import { assignmentSetToStylesheet, livingWebIndieWebProfile } from "@red-cup-engineering/css-services-section/css-cascade";
-import { quadraticToNumber } from "@red-cup-engineering/computer-data-engineering-services-section/number/quadratic";
+import { quadraticToNumber } from "@red-cup-engineering/metrologic/number/quadratic";
 import { articleToHtmlPage } from "@red-cup-engineering/html-engineering-services-section/article-html";
 import { pageToHtmlPage } from "@red-cup-engineering/html-engineering-services-section/page-html";
 import { staticWebsiteBodyAttributes } from "@red-cup-engineering/html-engineering-services-section/static-page";
