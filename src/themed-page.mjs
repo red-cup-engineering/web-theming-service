@@ -7,13 +7,13 @@
  */
 
 import { escapeAttr } from "@red-cup-engineering/html-structural-projection-service";
-import { assignmentSetToStylesheet, livingWebIndieWebProfile } from "@red-cup-engineering/css-services-section/css-cascade";
+import { assignmentSetToStylesheet, livingWebIndieWebProfile } from "@red-cup-engineering/css-engineering-services-section/css-cascade";
 import { quadraticToNumber } from "@red-cup-engineering/metrologic/number/quadratic";
 import { articleToHtmlPage } from "@red-cup-engineering/html-engineering-services-section/article-html";
 import { pageToHtmlPage } from "@red-cup-engineering/html-engineering-services-section/page-html";
 import { staticWebsiteBodyAttributes } from "@red-cup-engineering/html-engineering-services-section/static-page";
 import { layout } from "@red-cup-engineering/xml-document-rendering-service/svg/layout";
-import { fiberToType, typographyFiber, typographyLocus } from "@red-cup-engineering/css-services-section/typography";
+import { fiberToType, typographyFiber, typographyLocus } from "@red-cup-engineering/css-engineering-services-section/typography";
 import { claim, mark, token } from "@red-cup-engineering/signcell/utterance";
 import { cell, predicateOfClaim } from "@red-cup-engineering/signcell/predication";
 
