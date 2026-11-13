@@ -217,6 +217,8 @@ test("admitTheme judges a well-formed theme as satisfying the contract and a mal
   const bad = { name: "", css: 42, head: null, header: null, footer: null, wrap: null };
   const badAdmission = admitTheme(bad);
   assert.equal(badAdmission.admitted, false);
+  assert.equal(badAdmission.reading, "active");
+  assert.ok(badAdmission.judgments.every((judgment) => judgment.value === "active"));
   assert.ok(badAdmission.reasons.length >= 3);
 });
 

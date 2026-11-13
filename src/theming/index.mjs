@@ -3,7 +3,7 @@ import { cell, knowledgeReading } from "@red-cup-engineering/signcell/cell";
 import { utterEvidenceSet } from "@red-cup-engineering/signcell/utterance";
 import { themePalette } from "../theming-computer/index.mjs";
 import { paletteCss } from "./palette-css.mjs";
-import { sidesOfReading } from "@red-cup-engineering/metrologic/four";
+import { sidesOfReading } from "@red-cup-engineering/computer-data-engineering-services-section/four";
 export { escapeHtmlText as escapeHtml };
 export const THEME_MEMBERS = Object.freeze([
     "name",
