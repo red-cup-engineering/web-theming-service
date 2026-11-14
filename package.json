@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/web-theming-service",
-  "version": "0.0.9",
+  "version": "0.0.10-dev.0",
   "type": "module",
   "description": "Deterministic semantic-article HTML shells and light/dark design-token CSS palettes, with numerical checks of specified token-pair contrast and color scarcity.",
   "repository": {
@@ -12,12 +12,14 @@
   },
   "scripts": {
     "check": "for f in $(find src -name '*.mjs'); do node --check \"$f\" || exit 1; done",
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "test:consumer": "node --test test/*.test.mjs"
   },
   "files": [
     "src",
     "package.json",
-    "README.md"
+    "README.md",
+    "test"
   ],
   "exports": {
     "./theming": {
@@ -40,13 +42,12 @@
     }
   },
   "dependencies": {
-    "@red-cup-engineering/metrologic": "0.4.0",
-    "@red-cup-engineering/computer-data-engineering-services-section": "0.2.0",
+    "@red-cup-engineering/metrologic": "0.22.2",
     "@red-cup-engineering/xml-document-rendering-service": "0.1.7",
-    "@red-cup-engineering/signcell": "0.2.0",
-    "@red-cup-engineering/css-engineering-services-section": "0.1.4",
+    "@red-cup-engineering/signcell": "0.17.5",
+    "@red-cup-engineering/css-engineering-services-section": "0.1.5-dev.0",
     "@red-cup-engineering/html-engineering-services-section": "0.1.3",
-    "@red-cup-engineering/html-structural-projection-service": "0.3.3"
+    "@red-cup-engineering/html-structural-projection-service": "0.4.3-dev.0"
   },
   "sideEffects": false,
   "private": false,
@@ -54,5 +55,13 @@
   "funding": {
     "type": "individual",
     "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
-  }
+  },
+  "receivingTests": [
+    "test/color-coverage.test.mjs",
+    "test/design-tokens.test.mjs",
+    "test/package-contract.test.mjs",
+    "test/theming-computer.test.mjs",
+    "test/theming-shell.test.mjs",
+    "test/web-theming.test.mjs"
+  ]
 }
